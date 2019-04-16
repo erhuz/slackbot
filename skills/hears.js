@@ -15,9 +15,11 @@ module.exports = (controller) => {
     });
   });
 
-  controller.hears(['^say (-*)'], 'direct_message,direct_mention', (bot, message) => {
-    if (message.macth[1]) {
-      bot.reply(message, message.macth[1]);
+  controller.hears(['^say (.*)'], 'direct_message,direct_mention', (bot, message) => {
+    if (message.match[1]) {
+      bot.reply(message, message.match[1]);
+    }else{
+      logger.error("DID NOT REACH");
     }
   });
 
