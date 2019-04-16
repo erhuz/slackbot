@@ -55,3 +55,7 @@ controller.setupWebserver(PORT, (err, webserver) => {
       res.send('Connected to Slack');
     });
 });
+
+// Our bot's skillset
+const hears = require(path.join(__dirname, 'skills/hears'));
+hears(controller);
