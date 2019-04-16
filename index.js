@@ -13,7 +13,8 @@ const logger = require(path.join(__dirname, 'logger'));
   'CLIENT_SIGNING_SECRET',
   'VERIFICATION_TOKEN',
   'BOT_TOKEN',
-  'WEBHOOK_URL'
+  'WEBHOOK_URL',
+  'YOUTUBE_API_KEY'
 ].forEach(name => {
   if(!process.env[name]){
     const msg = `Environment variable ${name} is missing`;
@@ -59,6 +60,8 @@ controller.setupWebserver(PORT, (err, webserver) => {
 // Our bot's skillset
 const hears = require(path.join(__dirname, 'skills/hears'));
 const convo = require(path.join(__dirname, 'skills/convo'));
+const search = require(path.join(__dirname, 'skills/search'));
 
 hears(controller);
 convo(controller);
+search(controller);
