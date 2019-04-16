@@ -58,10 +58,10 @@ controller.setupWebserver(PORT, (err, webserver) => {
 });
 
 // Our bot's skillset
+const search = require(path.join(__dirname, 'skills/search'));
 const hears = require(path.join(__dirname, 'skills/hears'));
 const convo = require(path.join(__dirname, 'skills/convo'));
-const search = require(path.join(__dirname, 'skills/search'));
 
+search(controller);
 hears(controller);
 convo(controller);
-search(controller);
