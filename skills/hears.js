@@ -14,5 +14,4 @@ module.exports = (controller) => {
       bot.reply(message, `Hello ${real_name}!`);
     });
   });
-  console.log(controller);
 }
