@@ -11,7 +11,7 @@ module.exports = (controller) => {
 
       const { real_name } = res.user;
 
-      bot.reply(message, `Hello ${message.text} ${real_name}!`);
+      bot.reply(message, `Hello ${real_name}!`);
     });
   });
 
