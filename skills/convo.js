@@ -1,3 +1,5 @@
+const logger = require('../logger');
+
 module.exports = (controller) => {
   controller.hears('start convo', 'direct_message,direct_mention', (bot, message) => {
     bot.startConversation(message, conversationExample);
