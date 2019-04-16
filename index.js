@@ -58,4 +58,7 @@ controller.setupWebserver(PORT, (err, webserver) => {
 
 // Our bot's skillset
 const hears = require(path.join(__dirname, 'skills/hears'));
+const convo = require(path.join(__dirname, 'skills/convo'));
+
 hears(controller);
+convo(controller);
