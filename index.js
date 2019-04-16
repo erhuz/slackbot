@@ -55,7 +55,3 @@ controller.setupWebserver(PORT, (err, webserver) => {
       res.send('Connected to Slack');
     });
 });
-
-// logger.debug('Console Only');
-// logger.info('Console and combined.log');
-// logger.error('All over');
